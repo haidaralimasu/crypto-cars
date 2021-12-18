@@ -1,0 +1,31 @@
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@3.2.0
+compiler:
+  solc:
+    version: 0.6.3
+    optimizer:
+      enabled: true
+      runs: 200
+    remappings:
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@3.2.0'
+dotenv: .env
+dev_deployment_artifacts: True
+networks:
+  development:
+    verify: False
+  ganache:
+    verify: False
+  kovan:
+    verify: True
+  rinkeby:
+    verify: True
+  mainnet:
+    verify: True
+  bsc-test:
+    verify: True
+  polygon-test:
+    verify: True
+  polygon-main:
+    verify: True
+wallets:
+  from_key: ${PRIVATE_KEY}
